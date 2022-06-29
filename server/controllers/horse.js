@@ -76,7 +76,7 @@ const horseControllers = {
         res.json(horseData);
       } catch (error) {
         res.json(error);
-      }
+      };
     },
   };
 
