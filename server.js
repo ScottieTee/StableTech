@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const database = require('./config/connection');
+const database = require('./server/config/connection');
 const dotenv = require("dotenv");
 
 const app = express();
@@ -16,7 +16,7 @@ const connect = async () => {
 app.use(express.json())
 //app.use(express.static(public))
 app.use(express.urlencoded({ extended: true }))
-app.use(require("./routes"));
+app.use(require("./server/routes"));
 
 
 database.once('open', () => {
