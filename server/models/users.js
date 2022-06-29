@@ -26,5 +26,5 @@ const userSchema = new mongoose.Schema({
 {
     timestamps: true
 })
-
+//47:47 potenial useAdmin
 module.exports = mongoose.model("User", userSchema);
