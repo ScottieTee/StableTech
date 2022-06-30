@@ -1,6 +1,14 @@
 const router = require('express').Router();
 
-const { getAllOwners, addOwners, getOwnerPhoneById, addPhone, deletePhone, getAllDates, addDates, updateDate, deleteDate } = require('../../controllers/horse');
+const { 
+    getAllOwners, 
+    addOwners, 
+    getOwnerById, 
+    addPhone, 
+    deletePhone, 
+    addDates, 
+    updateDate, 
+    deleteDate } = require('../../controllers/schedule');
 
 router
 .route('/')
@@ -9,7 +17,7 @@ router
 
 router
 .route('/:owner')
-.get(getOwnerPhoneById)
+.get(getOwnerById)
 .post(addPhone)
 .delete(deletePhone);
 
