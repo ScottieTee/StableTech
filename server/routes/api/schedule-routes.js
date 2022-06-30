@@ -15,7 +15,6 @@ router
 
 router
 .route('/:owner/schedule')
-.get(getAllDates)
 .post(addDates)
 .put(updateDate)
 .delete(deleteDate);
