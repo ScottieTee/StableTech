@@ -23,8 +23,6 @@ const authControllers = {
         }
     },
 
-    
-
 async login(req, res, next) {
         try {
             const user = await User.findOne({ username: req.body.username })
@@ -33,6 +31,7 @@ async login(req, res, next) {
             const isPasswordCorrect = await bcrypt.compare(req.body.password, user.password)
             if (!isPasswordCorrect) return next(createError(400, "Incorrect password or username!"))
 
+            const { password, ...otherDetails } = user._doc;
             res.status(200).json(user);
         } catch (err) {
             next(err)
