@@ -1,7 +1,7 @@
-import User from "../models/users.js"
+const User = require("../models/users.js");
 
 //register a new user 
-export const register = async (req, res, next) => {
+const register = async (req, res, next) => {
     try{
         const newUser = new User({
             username: req.body.username,
@@ -16,3 +16,5 @@ export const register = async (req, res, next) => {
         next(err)
     }
 }
+
+module.exports = register;

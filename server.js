@@ -13,6 +13,7 @@ const connect = async () => {
 }
 //mongoose.connection.on()
 
+//middlewares
 app.use(express.json())
 //app.use(express.static(public))
 app.use(express.urlencoded({ extended: true }))
