@@ -1,0 +1,190 @@
+
+.header {
+
+    display: flex;
+    /* justify-content: space-between; */
+    background-color: #fff0f0;
+    background-image: url("horse1.webp");
+    align-items: center;
+    
+   
+
+}
+
+.stable {
+
+    display: flex;
+    color: coral;
+    font-family: cursive;
+    
+
+}
+
+.contant {
+    display: flex;
+   
+    color: chartreuse;
+    margin-right: 20px;
+    list-style: none;
+  margin-left: 600px;
+    
+}
+
+.about {
+    margin: 5px;
+
+}
+.home {
+    margin: 5px;
+
+}
+
+.login {
+    margin: 5px;
+
+}
+
+.welcome {
+    
+    background-image: url("horse2.webp");
+    height: 600px;
+    margin-bottom: 0px;
+    
+         
+}
+
+.move {
+
+    margin-top: 1px;
+    margin-left: 400px;
+    font-family: cursive;
+    font-weight:1000;
+    font-size: large;
+    color: coral;
+}
+
+.touch {
+    
+    margin-top: 100px;
+    color: coral;
+    font-weight:1000;
+    font-size: large;
+    margin-left: 190px;
+}
+
+.button {
+  margin-top: 50px;
+    margin-left: 500px;
+    background-color: chartreuse;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contant2 {
+    
+    margin-left: 1000px;
+    list-style: none;
+    color: chartreuse;
+}
+
+.hero-form {
+display: flex;
+justify-content: center;
+
+}
+
+.input{
+
+    display: flex;
+}
+
+.image {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+.header3 {
+    background-image: url("horse5.jpg");
+    height: 200px;
+    postion: center;
+    
+    /* display: flex;
+    justify-content:center; */
+}
+
+.stable3{
+    /* display: flex; */
+    text-align: center;
+    padding-top: 25px;
+    color: darkgoldenrod;
+    
+}
+
+.content3{
+
+display: flex;
+color: chartreuse;
+justify-content: end;
+
+}
+
+.login3 {
+    
+    display: flex;
+    margin-right: 15px;
+   
+}
+
+.home3 {
+    display: flex;
+    
+}
+
+.manage {
+    
+    
+    
+    
+   
+}
+
+.manage_horse {
+    margin-top: 50px;
+   width: 200px;
+   height: 30px;
+   margin-left: 42%;
+    
+}
+
+ #word {
+    width:200px;
+    height: 30px;
+    background-color: bisque;
+    color:coral; 
+    border: 2px solid coral;
+ }
+
+
+
+.manage_schedule {
+    margin-top: 50px;
+   width: 200px;
+   height: 30px;
+   margin-left: 45%;
+
+}
+
+#word3 {
+    margin-top: 10px;
+    width:200px;
+    height: 30px;
+    background-color: bisque;
+    color:coral;
+    margin-left: 42%;
+    border: 2px solid coral;
+    
+}
