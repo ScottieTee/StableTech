@@ -127,8 +127,9 @@ justify-content: center;
 .content3{
 
 display: flex;
-color: chartreuse;
+color:coral;
 justify-content: end;
+font-weight: bold;
 
 }
 
@@ -156,7 +157,7 @@ justify-content: end;
     margin-top: 50px;
    width: 200px;
    height: 30px;
-   margin-left: 42%;
+   margin-left: 47%;
     
 }
 
@@ -184,7 +185,112 @@ justify-content: end;
     height: 30px;
     background-color: bisque;
     color:coral;
-    margin-left: 42%;
+    margin-left: 47%;
     border: 2px solid coral;
     
+}
+
+.image3  {
+
+margin-left: 750px;
+position: relative; top: -69px;
+
+
+}
+
+.fact {
+    position: relative; top: -530px;
+    color:darkgoldenrod
+
+}
+
+.header4 {
+    background-image: url("horse6.jpg");
+    /* text-align: center; */
+   height: 200px;
+   
+    
+
+}
+
+.position  {
+    text-align: center;
+    position: relative; top: 60px;
+    color: coral;
+    background-size: cover;
+}
+
+.manage4 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+}
+
+#My {
+    background-color: blue;
+}
+
+#Add {
+    background-color: blue;
+}
+
+#Edit {
+    background-color: blue;
+    width:90px;
+}
+
+#Remove {
+    background-color: blue;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+#table1 {
+    border-collapse: collapse;
+    margin-top: 25px;
+    margin-left: 35%;
+    
+  }
+
+  .row1 {
+    height: 25px;
+    
+  }
+  .row2 {
+    height: 25px;
+    
+
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  .input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .checkmark:after {
+    top: 9px;
+   left: 9px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: white;
+}
+
+#Schedule4 {
+
+    margin-left: 50%;
+    background-color: blue;
+    margin-top: 25px;
+
 }
