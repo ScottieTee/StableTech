@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const database = require('./server/config/connection');
 const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
 
 
 const app = express();
@@ -15,7 +16,8 @@ const connect = async () => {
 //mongoose.connection.on()
 
 //middlewares
-app.use(express.json())
+app.use(cookieParser());
+app.use(express.json());
 //app.use(express.static(public))
 app.use(express.urlencoded({ extended: true }))
 app.use(require("./server/routes"));
