@@ -78,7 +78,7 @@ const scheduleController = {
         .catch((err) => res.json(err));
     },
 
-    async updateDate({ params, body }, res) {
+    async updateDate({ params, body }, res) { 
         Schedule.findOneAndUpdate(
             { _id: params.ownerId},
             body,

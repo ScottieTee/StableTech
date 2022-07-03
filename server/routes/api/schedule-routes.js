@@ -4,22 +4,20 @@ const {
     getAllOwners, 
     addOwners, 
     getOwnerById, 
-    addPhone, 
-    deletePhone, 
+    deleteOwner,
     addDates, 
     updateDate, 
     deleteDate } = require('../../controllers/schedule');
 
 router
 .route('/')
-.get(getAllOwners)
+.get(getAllOwners) 
 .post(addOwners);
 
 router
 .route('/:owner')
 .get(getOwnerById)
-.post(addPhone)
-.delete(deletePhone);
+.delete(deleteOwner);
 
 router
 .route('/:owner/schedule')
