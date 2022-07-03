@@ -41,6 +41,7 @@ const authControllers = {
 
             const { password, ...otherDetails } = user._doc;
             res.cookie("access_token", {
+              //doesnt allow any client secret to reach this cookie
               httpOnly: true,  
             }).status(200).json(user);
         } catch (err) {
