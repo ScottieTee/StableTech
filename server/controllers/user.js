@@ -69,8 +69,3 @@ const userControllers = {
   };
 
   module.exports = userControllers;
-
-//social network api controllers and routes 
-
-//create get and post for user and for horses
-//find a template i like 

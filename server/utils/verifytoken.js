@@ -1,5 +1,5 @@
 const JWT = require("jsonwebtoken");
-const creatError = require("")
+const createError = require("./errors");
 
 //this needs to be converted to async scot
 const verifyToken = (req, res, next) => {
@@ -15,3 +15,4 @@ const verifyToken = (req, res, next) => {
         next()
     });
 };
+module.exports= verifyToken;
