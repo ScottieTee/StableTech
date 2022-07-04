@@ -1,0 +1,41 @@
+.stable3{
+    /* display: flex; */
+    text-align: center;
+    padding-top: 25px;
+    color: darkgoldenrod;
+    
+}
+
+.content3{
+
+display: flex;
+color:coral;
+justify-content: end;
+font-weight: bold;
+position: relative; top: -73px;  
+
+}
+.image_3 {
+
+  margin-left: 500px;
+ position: relative; top: -250px;    
+}
+
+.home3 {
+    margin-right: 25px;;
+}
+
+#formsubmit3 {
+    background-color: coral;
+    margin-top: 20px;
+}
+ .input3 {
+    margin-left: 30px;
+ }
+
+ #password {
+    margin-top: 10px;
+ }
+ .form-input1 {
+    width: 245px;
+ }

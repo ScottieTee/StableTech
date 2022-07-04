@@ -1,0 +1,17 @@
+.hero-form {
+    display: flex;
+    justify-content: center;
+    
+    }
+    
+    .input{
+    
+        display: flex;
+    }
+    
+    .image4 {
+        display: flex;
+        margin-left: 100px;
+        margin-top: 15px;
+    }
+    

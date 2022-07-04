@@ -1,0 +1,57 @@
+.welcome {
+    
+    /* background-image: url("horse2.webp"); */
+    
+    position: relative; top: -120px;
+    
+         
+}
+
+.move {
+    height: 300px;
+    margin-top: 1px;
+    margin-left: 500px;
+    font-family: cursive;
+    font-weight:1000;
+    font-size: large;
+    color: coral;
+}
+
+.touch {
+    
+    margin-top: 100px;
+    color: coral;
+    font-weight:1000;
+    font-size: large;
+    margin-left: 190px;
+    position: relative; top: -100px;
+
+}
+
+.button {
+    margin-top: 50px;
+      margin-left: 600px;
+      background-color: chartreuse;
+      position: relative; top: -100px;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+.about {
+    list-style: none;
+    position: relative; top: -122px;
+    margin-right: 20px;
+    font-weight: 900;
+
+}
+
+.login {
+    list-style: none;
+    position: relative; top: -122px;
+    font-weight: 900;
+
+
+}
