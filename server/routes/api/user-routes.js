@@ -11,6 +11,8 @@ router.route("/:id")
 .delete(deleteUser)
 
 router.route("/checkauthentication")
-.get(verifyToken)
+.get(verifyToken, (req,res,next)=>{
+    res.send("Hello user, you're logged in!")
+})
 
 module.exports = router;
