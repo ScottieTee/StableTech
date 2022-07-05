@@ -1,30 +1,63 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
+const bcrypt = require('bcrypt');
 
-//email validation
-const checkEmail = function (email) {
-    //will test the below regex pattern, i dont think it should be in a string
-    const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return re.test(email);
-};
-
-const userSchema = new mongoose.Schema({ 
-    username:{
+const userSchema = new Schema(
+    {
+      username: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        trim: true
+      },
+      email: {
+        type: String,
+        required: true,
+        unique: true,
+        match: [/.+@.+\..+/, 'Must match an email address!']
+      },
+      password: {
+        type: String,
+        required: true,
+        minlength: 5
+      },
+      horses: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: 'Horse'
+        }
+      ],
+      schedule: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: 'Schedule'
+        }
+      ]
     },
-    email:{
-        type: String, 
-        required: true, 
-        unique: true
-    },
-    password:{
-        type: String, 
-        required: true
+    {
+      toJSON: {
+        virtuals: true
+      }
     }
-},
-{
-    timestamps: true
-})
-
-module.exports = mongoose.model("User", userSchema);
+  );
+  
+  // set up pre-save middleware to create password
+  userSchema.pre('save', async function(next) {
+    if (this.isNew || this.isModified('password')) {
+      const saltRounds = 10;
+      this.password = await bcrypt.hash(this.password, saltRounds);
+    }
+  
+    next();
+  });
+  
+  // compare the incoming password with the hashed password
+  userSchema.methods.isCorrectPassword = async function(password) {
+    return bcrypt.compare(password, this.password);
+  };
+  
+  
+  
+  
+  const User = model('User', userSchema);
+  
+  module.exports = User;

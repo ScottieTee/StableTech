@@ -4,7 +4,7 @@ import Navbar from '../../componats/Navbar'
 import background6 from "../../pages/images/horse1.webp";
 
 
-function horses() {
+function Horses() {
   return (
    <div> <img src= { background6 } alt="horse6" height={200} width={1280} />
     <div> 
@@ -62,4 +62,4 @@ function horses() {
   )
 }
 
-export default horses
+export default Horses

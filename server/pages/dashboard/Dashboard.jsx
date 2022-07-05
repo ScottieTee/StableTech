@@ -5,7 +5,7 @@ import background4 from "../../pages/images/horse5.jpg";
 import background1 from "../../pages/images/horse5.jpg";
 
 
-function dashboard() {
+function Dashboard() {
   return (
     <div><img src= { background4 } alt="horse6" height={200} width={1280} />
     <header>
@@ -64,4 +64,4 @@ function dashboard() {
   )
 }
 
-export default dashboard
+export default Dashboard
