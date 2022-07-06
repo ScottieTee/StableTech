@@ -1,60 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Login from './components/Login';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from '../src/components/Login';
-import Signup from '../../server/pages/signup/Signup';
-import Home from '../../server/pages/home/Home';
-import Dashboard from '../../server/pages/dashboard/Dashboard';
-import Horses from '../../server/pages/horses/Horses';
-import Schedule from '../../server/pages/schedule/Schedule';
-
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import SignUp from './components/signup';
+import Footer from './components/footer';
 function App() {
   return (
-    <ApolloProvider client={client}>
-        <Router>
-            <div className='flex-column justify-flex-start min-100-vh'>
-            <Header />
-            <div className='container'>
+    <Router>
+      <div className="App">
+        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+          <div className="container">
+            <Link className="navbar-brand" to={'/sign-in'}>
+              positronX
+            </Link>
+            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/sign-in'}>
+                    Login
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={'/sign-up'}>
+                    Sign up
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div className="auth-wrapper">
+          <div className="auth-inner">
             <Routes>
-                <Route
-                    path="/Signup"
-                    element={<Signup />}
-                />
-
-                <Route
-                    path="/Login"
-                    element={<Login />}
-                />
-
-                <Route
-                    path="/Home"
-                    element={<Home />}
-                />
-
-                <Route
-                    path="/Dashboard"
-                    element={<Dashboard />}
-                />
-
-                <Route
-                    path="/Horses"
-                    element={<Horses />}
-                />
-
-                <Route
-                    path="/Schedule"
-                    element={<Schedule />}
-                />
-        </Routes>
+              <Route path="/sign-up" element={<SignUp />} />
+            </Routes>
+          </div>
+        </div>
       </div>
-     <Footer />
-    </div>
-  </Router>
-</ApolloProvider>
-  );
+
+    </Router>
+  )
 }
 
-export default App;
+export default App
