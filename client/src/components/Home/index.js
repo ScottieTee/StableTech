@@ -1,5 +1,5 @@
 import React from 'react';
-import barnlogo from '../assets/images/barnlogo.png';
+import barnlogo from '../../assets/images/barnlogo.png';
 import { Link } from 'react-scroll';
 
 const Home = () => {

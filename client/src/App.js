@@ -2,12 +2,11 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from './components/Login/index';
 import Horses from './components/Horse/index';
 import Schedule from './components/schedule/index';
-import Home from './pages/index';
+import Home from './components/Home/index';
 
 
 
@@ -24,16 +23,30 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-    <div>
-      <main>
-        
-     <Login></Login> 
-     <Home></Home>
-     <Horses></Horses>
-     <Schedule></Schedule>
-
-      </main>
-    </div>
+   <Router>
+        <div className="flex-column justify-flex-start min-100-vh">
+          <div className="container">
+            <Routes>
+              <Route
+                path="/"
+                element={<Home />}
+              />
+              <Route
+                path="/login"
+                element={<Login />}
+              />
+              <Route
+                path="/horses"
+                element={<Horses />}
+              />
+              <Route
+                path="/schedule"
+                element={<Schedule />}
+              />
+            </Routes>
+          </div>
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
