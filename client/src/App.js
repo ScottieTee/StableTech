@@ -1,19 +1,24 @@
-// import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Footer from './components/footer';
-import Navbar from './components/navbar.jsx';
-import Hero from './components/hero';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route}
+  from 'react-router-dom';
+import Home from './pages';
+import Signup from './pages/signup';
+import Schedule from './pages/schedule';
 
 function App() {
-  return (
-    <div className="App">
-      <Footer/>
-      <Navbar/>
-      <Hero/>
-    </div>
-  );
+return (
+  <Router>
+  <Navbar />
+  <Routes>
+    <Route path='/' element={<Home />} />
+    <Route path='/about' element={<Signup />} />
+    <Route path='/contact' element={<Schedule />} />
+  </Routes>
+  </Router>
+);
 }
 
 export default App;
+
