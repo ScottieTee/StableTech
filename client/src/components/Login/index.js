@@ -36,7 +36,7 @@ const Login = () => {
             </button>
 
             <p class="text-right"><a class="text-blue-600 text-sm font-light hover:underline"
-                    href="https://www.kindacode.com">Forget Password?</a></p>
+                    href="mailto:sscotthompson@gmail.com">Forget Password?</a></p>
         </form>
     </div>
       </form>

@@ -6,11 +6,13 @@ const Home = () => {
 return (
 <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#5b5b5b] text-gray-300">
 <div>
-    <img src={barnlogo} alt="logo" style={{ width: "75px"}} />
+    <img className="rounded-full" src={barnlogo} alt="logo" style={{ width: "75px"}} />
 </div>
 
+<div className="font-sans text-6xl">StableTech</div>
 
-<ul className="hidden md:flex">
+
+<ul className="hidden md:flex flex space-x-4">
     <li className="hover:text-[#3faec1] hover:scale-105">
         <Link to="hero" smooth={true} duration={500}>
             Home
@@ -23,10 +25,6 @@ return (
     </li>
 </ul>
 
-<ul>
-    <li> Home</li>
-    <li > Sign In</li>
-</ul>
 </div>
 );
 };
