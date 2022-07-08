@@ -4,7 +4,8 @@ import { Link } from 'react-scroll';
 
 const Homepage = () => {
     return (
-        <div name="hero" className="bg-[#b7b5b5] w-full h-screen">
+        <div class="w-screen h-screen flex justify-center items-center
+    bg-gradient-to-r from-gray-700 via-gray-300 to-gray-700"> 
 
             <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-around h-full">
                 <div id="content">
