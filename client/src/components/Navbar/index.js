@@ -1,25 +1,30 @@
-import React from "react";
-import { Nav, NavLink, NavMenu }
-  from "./NavbarElements";
+import React from 'react';
+import barnlogo from '../../assets/images/barnlogo.png';
+import { Link } from 'react-scroll';
 
-const Navbar = () => {
+const Home = () => {
 return (
-  <>
-  <Nav>
-    <NavMenu>
-    <NavLink to="/Sign-In" activeStyle>
-      Sign In
-    </NavLink>
-    <NavLink to="/View Horses" activeStyle>
-      View Horses
-    </NavLink>
-    <NavLink to="/View Schedule" activeStyle>
-      View Schedule
-    </NavLink>
-    </NavMenu>
-  </Nav>
-  </>
+<div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#5b5b5b] opacity-75 text-gray-300">
+<div>
+    <img className="rounded-full" src={barnlogo} alt="logo" style={{ width: "75px"}} />
+</div>
+
+
+<ul className="hidden md:flex flex space-x-4">
+    <li className="hover:text-[#3faec1] hover:scale-105">
+        <Link to="hero" smooth={true} duration={500}>
+            Home
+        </Link>
+    </li>
+    <li className="hover:text-[#3faec1] hover:scale-105">
+        <Link to="about" smooth={true} duration={500}>
+            Sign In
+        </Link>
+    </li>
+</ul>
+
+</div>
 );
 };
 
-export default Navbar;
+export default Home;

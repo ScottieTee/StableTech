@@ -5,7 +5,8 @@ import { QUERY_HORSES_OWNERNAME } from "../../utils/queries";
 const Horses =()=>{
     return(
 
-   
+<div class="w-screen h-screen flex justify-center items-center
+    bg-gradient-to-br from-blue-700 to-white-700"> 
 <div className="cards">
 <header
     className="card-header">
@@ -23,6 +24,7 @@ const Horses =()=>{
 
 
 
+</div>
 </div>
  )
 

@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Login from './components/Login/index';
 import Horses from './components/Horse/index';
 import Schedule from './components/schedule/index';
-import Home from './pages/index';
+import Home from './components/Navbar/index';
+import Homepage from './components/Homepage/index';
 
 
 const httpLink = createHttpLink({
@@ -24,8 +25,8 @@ function App() {
         <Home />
             <Routes>
               <Route
-                path="/"
-                element={<Home />}
+                path="/home"
+                element={<Homepage />}
               />
               <Route
                 path="/login"
