@@ -8,6 +8,7 @@ import Horses from './components/Horse/index';
 import Schedule from './components/schedule/index';
 import Home from './components/Navbar/index';
 import Homepage from './components/Homepage/index';
+import Addhorse from './components/Addhorse/index';
 
 
 const httpLink = createHttpLink({
@@ -35,6 +36,10 @@ function App() {
               <Route
                 path="/horses"
                 element={<Horses />}
+              />
+              <Route
+                path="/addhorse"
+                element={<Addhorse />}
               />
               <Route
                 path="/schedule"
