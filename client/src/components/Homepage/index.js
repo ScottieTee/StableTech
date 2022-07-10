@@ -10,9 +10,9 @@ const Homepage = () => {
             <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-around h-full">
                 <div id="content">
                     <div>
-                        <h1 className="text-4xl sm:text-7xl font-bold text-[#2986cc]" >
+                        <h1 className="text-4xl sm:text-7xl font-bold text-[#4ea5e7]" >
                             StableTech</h1>
-                        <h2 className="text-3xl sm:text-6xl font-bold text-[#4ea5e7]">
+                        <h2 className="text-3xl sm:text-6xl font-bold text-[#2986cc]">
                             Modern Barn Management
                         </h2>
                         <p className="text-gray-300 py-4 max-w-[700px]">

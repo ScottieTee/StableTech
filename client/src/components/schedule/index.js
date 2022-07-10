@@ -9,7 +9,7 @@ const Schedule = (visitDay, visitMonth, visitYear, visitReason, horseName, owner
       bg-gradient-to-br from-blue-700 to-white-700 p-6">
       <div class="flex flex-col justify-center gap-8 pt-4">
         <div className="flex justify-center pt-6">
-          <h1 className="text-4xl sm:text-7xl font-bold text-[##5b5b5b]">
+          <h1 className="text-4xl sm:text-7xl font-bold text-white">
             Barn Schedule</h1>
         </div>
         <div class="flex flex-row justify-center gap-4">
