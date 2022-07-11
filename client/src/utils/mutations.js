@@ -43,7 +43,6 @@ mutation AddHorse($name: String!, $ownerName: String!, $ownerPhone: String!, $va
 `;
 
 export const ADD_SCHEDULE = gql`
-
 mutation AddSchedule($visitDay: String!, $visitMonth: String!, $visitYear: String!, $visitReason: String!, $horseName: String!, $ownerName: String!) {
   addSchedule(visitDay: $visitDay, visitMonth: $visitMonth, visitYear: $visitYear, visitReason: $visitReason, horseName: $horseName, ownerName: $ownerName) {
     visitDay
@@ -55,5 +54,18 @@ mutation AddSchedule($visitDay: String!, $visitMonth: String!, $visitYear: Strin
     createdAt
   }
 }
+`
 
+export const UPDATE_SCHEDULE=gql`
+mutation UpdateSchedule($id: ID!, $visitDay: String, $visitMonth: String, $visitYear: String, $visitReason: String, $horseName: String, $ownerName: String) {
+  updateSchedule(_id: $id, visitDay: $visitDay, visitMonth: $visitMonth, visitYear: $visitYear, visitReason: $visitReason, horseName: $horseName, ownerName: $ownerName) {
+    _id
+    visitDay
+    visitMonth
+    visitYear
+    visitReason
+    horseName
+    ownerName
+  }
+}
 `

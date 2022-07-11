@@ -3,7 +3,6 @@ import { useQuery } from '@apollo/client';
 
 
 
-
 import { QUERY_SCHEDULE } from '../../utils/queries';
 const Login = () => {
   const {loading, data} = useQuery(QUERY_SCHEDULE)

@@ -1,15 +1,32 @@
 import React from "react";
 import { Link } from "react-scroll";
 import clockImage from "../../assets/images/clock.png"
+import { ADD_SCHEDULE } from '../utils/mutations'; 
+import { useQuery, useMutation, gql } from '@apollo/client';
 
-const Schedule = (visitDay, visitMonth, visitYear, visitReason, horseName, ownerName, createdAt) => {
+const ADD_SCHEDULE = gql`
+mutation AddSchedule($visitDay: String!, $visitMonth: String!, $visitYear: String!, $visitReason: String!, $horseName: String!, $ownerName: String!) {
+  addSchedule(input: (visitDay: $visitDay, visitMonth: $visitMonth, visitYear: $visitYear, visitReason: $visitReason, horseName: $horseName, ownerName: $ownerName) ) {
+    visitDay
+    visitMonth
+    visitYear
+    visitReason
+    horseName
+    ownerName
+    createdAt
+  }
+}
+`;
+
+const Schedule = () => {
+  const [addSchedule] = useMutation(ADD_SCHEDULE);
   return (
 
     <div class="w-screen h-screen flex justify-center items-center
       bg-gradient-to-br from-blue-700 to-white-700 p-6">
       <div class="flex flex-col justify-center gap-8 pt-4">
         <div className="flex justify-center pt-6">
-          <h1 className="text-4xl sm:text-7xl font-bold text-white">
+          <h1 className="text-4xl sm:text-7xl font-bold text-white" onClick={handleClick}>
             Barn Schedule</h1>
         </div>
         <div class="flex flex-row justify-center gap-4">
